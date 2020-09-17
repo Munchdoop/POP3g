@@ -15,7 +15,7 @@ let sum n:int =
             i <- i+1
         s 
 
-printfn "%i" (sum(8))
+//printfn "%i" (sum(8))
 
 //3g0 b)
 //The function returns the same result as the summation of all the numbers (1 + 2 + 3..+ n)
@@ -27,6 +27,10 @@ let simplesum n:int =
         s <- (n*(n+1))/2
         s 
 
-printfn "%i" (simplesum(8))
+//printfn "%i" (simplesum(8))
 
+//3g0 c)
+printf "Enter a Number:"
+let a = int (System.Console.ReadLine())
+printfn "%i %i" (simplesum(a)) (sum(a))
 
