@@ -14,6 +14,6 @@ let sum n:int =
             i <- i+1
         s 
 
-printfn "%i" (sum(-25))
+printfn "%i" (sum(5))
 
 //3g0 b)
