@@ -18,7 +18,7 @@ let sum n:int =
 printfn "%i" (sum(8))
 
 //3g0 b)
-//
+//The function returns the same result as the summation of all the numbers (1 + 2 + 3..+ n)
 let simplesum n:int =
     if n < 0 then 
         0
