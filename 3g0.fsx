@@ -1,10 +1,14 @@
 //HUSK DOCUMENTATION (summary, param, result)
-
-let sum (n:int) =
-    if n < 1 then 0
+//a
+let sum n:int =
+    if n < 1 then 
+        0
     else
-        let mutable i = 1
+        let mutable s = 0
+        let mutable i = 1 //counter 
         while i < n do
-            let mutable s = i + n
+            s <- s + i 
             i <- i+1
-    s 
+        s 
+
+printfn "%i" (sum(8))
