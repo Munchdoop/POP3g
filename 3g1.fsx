@@ -1,12 +1,9 @@
-let mulTable n:int =
-    let array = ""
-    if n < 1  then 
-        0
-    else
-        let mutable s = 1
-        let mutable i = 1 //counter 
-        while i <= n do
-            s <- s * i
-            array = s
-            i <- i+1
-        s
+let f n:int =
+    let str1 = "   1 2 3 4 5 6 7 8 9 10
+1 1 2 3 4 5 6 7 8 9 10
+2 2 4 6 8 10 12 14 16 18 20
+3 3 6 9 12 15 18 21 24 27 30
+4 4 8 12 16 20 24 28 32 36 40"
+    let str2 = str1.[0..n*10]
+    printfn "%s" str2
+    n
