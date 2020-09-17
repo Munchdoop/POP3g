@@ -1,9 +1,9 @@
 //HUSK DOCUMENTATION (summary, param, result)
 //opgave 3g0 a)
-/// <summary> Vi har lavet en funktion der lægger alle tal i talrækken sammen til og med n<\summary>
+/// <summary> A function has been made that sums all the numbers from i=1 to n<\summary>
 /// <param>
 /// <remarks> 
-/// <result> 
+/// <result> The function return the sum of all the numbers 
 let sum n:int =
     if n < 1 then 
         0
