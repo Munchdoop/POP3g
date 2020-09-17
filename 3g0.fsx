@@ -19,7 +19,7 @@ let sum n:int =
 
 //3g0 b)
 //The function returns the same result as the summation of all the numbers (1 + 2 + 3..+ n)
-let simplesum n:int =
+let simpleSum n:int =
     if n < 0 then 
         0
     else 
@@ -27,10 +27,10 @@ let simplesum n:int =
         s <- (n*(n+1))/2
         s 
 
-//printfn "%i" (simplesum(8))
+//printfn "%i" (simpleSum(8))
 
 //3g0 c)
 printf "Enter a Number:"
 let a = int (System.Console.ReadLine())
-printfn "sum = %i, simplesum = %i" (sum(a)) (simplesum(a))
+printfn "sum = %i, simpleSum = %i" (sum(a)) (simpleSum(a))
 
