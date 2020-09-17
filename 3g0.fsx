@@ -34,3 +34,10 @@ printf "Enter a Number:"
 let a = int (System.Console.ReadLine())
 printfn "sum = %i, simpleSum = %i" (sum(a)) (simpleSum(a))
 
+//3g0 d) 
+printfn "n sum simplesum"
+for i = 1 to 10 do 
+    printfn "%d | %d | %d" i (sum(i)) (simpleSum(i)) 
+
+//3g0 e)
+(**)
