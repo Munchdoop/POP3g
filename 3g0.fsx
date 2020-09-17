@@ -3,7 +3,7 @@
 /// <summary> A function has been made that sums all the numbers from i=1 to n<\summary>
 /// <param>
 /// <remarks> 
-/// <result> The function return the sum of all the numbers 
+/// <returns> The function return the sum of all the numbers </returns> 
 let sum n:int =
     if n < 1 then 
         0
@@ -32,5 +32,5 @@ let simplesum n:int =
 //3g0 c)
 printf "Enter a Number:"
 let a = int (System.Console.ReadLine())
-printfn "%i %i" (simplesum(a)) (sum(a))
+printfn "sum = %i, simplesum = %i" (sum(a)) (simplesum(a))
 
