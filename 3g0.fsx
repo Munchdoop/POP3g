@@ -1,7 +1,7 @@
 //HUSK DOCUMENTATION (summary, param, result)
 //opgave 3g0 a)
 /// <summary> A function has been made that sums all the numbers from i=1 to n<\summary>
-/// <param>
+/// <param> n
 /// <returns> The function return the sum of all the numbers </returns> 
 let sum n:int =
     if n < 1 then 
