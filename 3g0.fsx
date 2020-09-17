@@ -1,7 +1,7 @@
 //HUSK DOCUMENTATION (summary, param, result)
 //opgave 3g0 a)
-/// <summary> A function has been made that sums all the numbers from i=1 to n<\summary>
-/// <param> n
+/// <summary> A function has been made that sums all the numbers from i=1 to n</summary>
+/// <param> 
 /// <returns> The function return the sum of all the numbers </returns> 
 let sum n:int =
     if n < 1 then 
@@ -14,12 +14,10 @@ let sum n:int =
             i <- i+1
         s 
 
-//printfn "%i" (sum(8))
-
 //3g0 b)
-/// <summary> 
+/// <summary> We have made a function which uses the formula in figure 3 to find to summation of n </summary>
 /// <param>
-/// <returns>
+/// <returns> The function returns the summation of n, the same result as in the sum function </returns>
 //The function returns the same result as the summation of all the numbers (1 + 2 + 3..+ n)
 let simpleSum n:int =
     if n < 0 then 
@@ -29,12 +27,10 @@ let simpleSum n:int =
         s <- (n*(n+1))/2
         s 
 
-//printfn "%i" (simpleSum(8))
-
 //3g0 c)
-/// <summary> 
+/// <summary> This program asks the user for af Number and returns the summation calculated in sum og simpleSum </summary>
 /// <param>
-/// <returns>
+/// <returns> The program returns the values of the summation of n calculated in the sum og simpleSum function </returns>
 printf "Enter a Number:"
 let a = int (System.Console.ReadLine())
 printfn "sum = %i, simpleSum = %i" (sum(a)) (simpleSum(a))
