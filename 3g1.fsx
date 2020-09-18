@@ -1,28 +1,27 @@
-
-
 //løsningsforslag til a og b 
-//3g1 a) VIRKER IKKE HELT
-
-
-//løsningsforslag til a og b 
-//3g1 a) VIRKER IKKE HELT
-let tabel = "
-  1 2 3 4 5 6 7 8 9 10
-1 1 2 3 4 5 6 7 8 9 10
-2 2 4 6 8 10 12 14 16 18 20
-3 3 6 9 12 15 18 21 24 27 30
-4 4 8 12 16 20 24 28 32 36 40
-5 5 10 15 20 25 30 35 40 45 50
-6 6 12 18 24 30 36 42 48 54 60
-7 7 14 21 28 35 42 49 56 63 70
-8 8 16 24 32 40 48 56 64 72 80
-9 9 18 27 36 45 54 63 72 81 90
-10 10 20 30 40 50 60 70 80 90 100"
+//3g1 a) ~~VIRKER IKKE HELT~~ Det virker nu :)
+let tabel = "       1   2   3   4   5   6   7   8   9  10
+   1   1   2   3   4   5   6   7   8   9  10
+   2   2   4   6   8  10  12  14  16  18  20
+   3   3   6   9  12  15  18  21  24  27  30
+   4   4   8  12  16  20  24  28  32  36  40
+   5   5  10  15  20  25  30  35  40  45  50
+   6   6  12  18  24  30  36  42  48  54  60
+   7   7  14  21  28  35  42  49  56  63  70
+   8   8  16  24  32  40  48  56  64  72  80
+   9   9  18  27  36  45  54  63  72  81  90
+  10  10  20  30  40  50  60  70  80  90 100"
 let mulTable (n:int) =
-    if n = 10 then  
+    if n < 0 || n > 10 then
+        ""
+    else
+        tabel.[..44+(n*46)] 
+
+(*
+  if n = 10 then  
         tabel
     elif n=1 then
-        tabel.[..45] 
+        tabel.[..88] 
     elif n=2 then 
         tabel.[..73]
     elif n=3 then 
@@ -41,6 +40,7 @@ let mulTable (n:int) =
         tabel.[..288]
     else 
         ""
+*)
 
 
 ///<summary>
@@ -66,7 +66,9 @@ let loopMulTable (n:int) =
 
 printf "Enter a number: "
 let a = int (System.Console.ReadLine())
-printf "%s" (loopMulTable(a))
+
+printfn "mulTable: \n%s" (mulTable(a))
+printfn "loopMulTable: \n%s" (loopMulTable(a))
 
 
 //3g1c
@@ -77,8 +79,8 @@ for i=1 to a do
         printfn "%2d False" i 
 
 
-printf "%s" (mulTable(1))
-printf "%A" (mulTable(1))
+printfn "%s" (mulTable(a))
+printfn "%A" [mulTable(a)]
 (*%s prints mulTable as a string. and %A also prints a string because mulTable already returns a string.
 With %s you are given a string placeholder which is replaced by the argument you give it, here the Multable result. 
 With %A it converts any argument into a string, with a Fsharp internal function called ToString.*)
