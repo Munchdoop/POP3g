@@ -2,6 +2,10 @@
 
 //løsningsforslag til a og b 
 //3g1 a) VIRKER IKKE HELT
+
+
+//løsningsforslag til a og b 
+//3g1 a) VIRKER IKKE HELT
 let tabel = "
   1 2 3 4 5 6 7 8 9 10
 1 1 2 3 4 5 6 7 8 9 10
@@ -16,28 +20,32 @@ let tabel = "
 10 10 20 30 40 50 60 70 80 90 100"
 let mulTab (n:int) =
     if n = 10 then  
-        ""
+        tabel
     elif n=1 then
-        tabel.[..n*10] 
+        tabel.[..45] 
     elif n=2 then 
-        tabel.[..n*20]
+        tabel.[..73]
     elif n=3 then 
-        tabel.[..n*30]
+        tabel.[..103]
     elif n=4 then 
-        tabel.[..n*40]
+        tabel.[..133]
     elif n=5 then 
-        tabel.[..n*40]
+        tabel.[..164]
     elif n=6 then 
-        tabel.[..n*40]
+        tabel.[..195]
     elif n=7 then 
-        tabel.[..n*40]
+        tabel.[..226]
     elif n=8 then 
-        tabel.[..n*40]
+        tabel.[..257]
     elif n=9 then 
-        tabel.[..n*40]
-    else
+        tabel.[..288]
+    else 
         ""
+printfn "%s" (mulTab(1))
 printfn "%s" (mulTab(2))
+printfn "%s" (mulTab(3))
+printfn "%s" (mulTab(10))
+
 
 ///<summary>
 /// <param>
@@ -60,4 +68,9 @@ let loopMulTable (n:int) =
             res <- res + "\n"
         res
 
+loopMulTable(1)
+loopMulTable(2)
 loopMulTable(3)
+loopMulTable(10)
+
+//3g1c
