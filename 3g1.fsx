@@ -41,10 +41,6 @@ let mulTab (n:int) =
         tabel.[..288]
     else 
         ""
-printfn "%s" (mulTab(1))
-printfn "%s" (mulTab(2))
-printfn "%s" (mulTab(3))
-printfn "%s" (mulTab(10))
 
 
 ///<summary>
@@ -63,19 +59,18 @@ let loopMulTable (n:int) =
         for i = 1 to n do
             for j = 1 to 10 do
                 num <- i*j
-                stringNum <- sprintf "%3d" num
+                stringNum <- sprintf "%4d" num
                 res <- res + stringNum
             res <- res + "\n"
         res
 
 printf "Enter a number: "
 let a = int (System.Console.ReadLine())
-loopMulTable(a)
+printf "%s" (loopMulTable(a))
 
 
 //3g1c
-let n=10
-for i=1 to 10 do 
+for i=1 to a do 
     if mulTab(i) = loopMulTable(i) then
         printfn "%2d True" i
     else
