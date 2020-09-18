@@ -57,17 +57,17 @@ let loopMulTable (n:int) =
         //let mutable res = "" (GAMLE)
         
         // initialiser res med den øverste række i multiplikationstabellen
-        let mutable res = "       1   2   3   4   5   6   7   8   9  10\n"
+        let mutable res = "       1   2   3   4   5   6   7   8   9  10"
         let mutable num = 0
         let mutable stringNum = "" 
         
         for i = 1 to n do
-            res <- res + sprintf "%4d" i
+            res <- res + sprintf "\n%4d" i  // print newline + nuværende i (n) værdi
             for j = 1 to 10 do
                 num <- i*j
                 stringNum <- sprintf "%4d" num
                 res <- res + stringNum
-            res <- res + "\n"
+            //res <- res + "\n" (GAMLE)
         res
 
 printf "Enter a number: "
