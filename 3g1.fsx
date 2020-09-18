@@ -17,6 +17,8 @@ let mulTable (n:int) =
     else
         //tabel.[..44+(n*46)]   //hvorfor kan det ikke være 44? (n-1) måske?
         tabel.[..(44+(n*46))-1] // jep det er præcis derfor lol
+                                // ADVARSEL: underlig bug her.
+                                // Må være "tabel.[..(44+(n*45))-1]"" for at virke rigtigt i VSC terminalen...
 
 (*
   if n = 10 then  
@@ -78,12 +80,16 @@ printfn "loopMulTable: \n%s" (loopMulTable(a))
 
 
 //3g1c
-for i=1 to a do 
+(*for i=1 to a do 
     if mulTable(i) = loopMulTable(i) then
         printfn "%2d True" i
     else
-        printfn "%2d False" i 
+        printfn "%2d False" i*)
 
+//let str1 = mulTable(a)
+//let str2 = loopMulTable(a)
+//printfn "%d || %b" a (str1 = str2)
+printfn "%d || %b" a (mulTable(a) = loopMulTable(a))
 
 printfn "%s" (mulTable(a))
 printfn "%A" [mulTable(a)]
