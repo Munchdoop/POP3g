@@ -22,7 +22,7 @@ let mulTab (n:int) =
     elif n=2 then 
         tabel.[..n*20]
     elif n=3 then 
-        tabel.[..n*n30]
+        tabel.[..n*30]
     elif n=4 then 
         tabel.[..n*40]
     elif n=5 then 
@@ -35,15 +35,15 @@ let mulTab (n:int) =
         tabel.[..n*40]
     elif n=9 then 
         tabel.[..n*40]
-    else n < 1 || n > 10 
-        false
+    else
+        ""
 printfn "%s" (mulTab(2))
 
 ///<summary>
 /// <param>
 /// <returns>
 //3g1 b)
-let mulTable (n:int) =
+let loopMulTable (n:int) =
     if n < 1 then
         ""
     elif n > 10 then
@@ -55,13 +55,9 @@ let mulTable (n:int) =
         for i = 1 to n do
             for j = 1 to 10 do
                 num <- i*j
-                stringNum <- string num
-                res <- res + stringNum + " "
+                stringNum <- sprintf "%3d" num
+                res <- res + stringNum
             res <- res + "\n"
         res
 
-        
-
-printfn "%2s" (mulTable(3))
-
-
+loopMulTable(3)
