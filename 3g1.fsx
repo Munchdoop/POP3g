@@ -18,7 +18,7 @@ let tabel = "
 8 8 16 24 32 40 48 56 64 72 80
 9 9 18 27 36 45 54 63 72 81 90
 10 10 20 30 40 50 60 70 80 90 100"
-let mulTab (n:int) =
+let mulTable (n:int) =
     if n = 10 then  
         tabel
     elif n=1 then
@@ -71,7 +71,14 @@ printf "%s" (loopMulTable(a))
 
 //3g1c
 for i=1 to a do 
-    if mulTab(i) = loopMulTable(i) then
+    if mulTable(i) = loopMulTable(i) then
         printfn "%2d True" i
     else
         printfn "%2d False" i 
+
+
+printf "%s" (mulTable(1))
+printf "%A" (mulTable(1))
+(*%s prints mulTable as a string. and %A also prints a string because mulTable already returns a string.
+With %s you are given a string placeholder which is replaced by the argument you give it, here the Multable result. 
+With %A it converts any argument into a string, with a Fsharp internal function called ToString.*)
