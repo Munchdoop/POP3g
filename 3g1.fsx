@@ -68,9 +68,7 @@ let loopMulTable (n:int) =
             res <- res + "\n"
         res
 
-loopMulTable(1)
-loopMulTable(2)
-loopMulTable(3)
-loopMulTable(10)
+printf "Enter a number: "
+let a = int (System.Console.ReadLine())
+loopMulTable(a)
 
-//3g1c
