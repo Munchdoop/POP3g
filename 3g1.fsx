@@ -72,3 +72,8 @@ printf "Enter a number: "
 let a = int (System.Console.ReadLine())
 loopMulTable(a)
 
+for i in n do 
+    if mulTab(n) = loopmulTable(n) then
+        printfn "%d True" n
+    else
+        printfn "%d False" n 
