@@ -15,7 +15,8 @@ let mulTable (n:int) =
     if n < 0 || n > 10 then
         ""
     else
-        tabel.[..44+(n*46)] 
+        //tabel.[..44+(n*46)]   //hvorfor kan det ikke være 44? (n-1) måske?
+        tabel.[..(44+(n*46))-1] // jep det er præcis derfor lol
 
 (*
   if n = 10 then  
@@ -53,10 +54,15 @@ let loopMulTable (n:int) =
     elif n > 10 then
         ""
     else
-        let mutable res = ""
+        //let mutable res = "" (GAMLE)
+        
+        // initialiser res med den øverste række i multiplikationstabellen
+        let mutable res = "       1   2   3   4   5   6   7   8   9  10\n"
         let mutable num = 0
         let mutable stringNum = "" 
+        
         for i = 1 to n do
+            res <- res + sprintf "%4d" i
             for j = 1 to 10 do
                 num <- i*j
                 stringNum <- sprintf "%4d" num
