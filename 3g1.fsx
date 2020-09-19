@@ -21,6 +21,7 @@ let mulTable (n:int) =
     else
         table.[..(44+(n*46))-1] 
                                 
+printfn "Opgave 3g1a"
 printfn "%s" (mulTable(1))
 printfn "%s" (mulTable(2))
 printfn "%s" (mulTable(3))
@@ -53,6 +54,7 @@ let loopMulTable (n:int) =
                 res <- res + stringNum
         res
 
+printfn "Opgave 3g1b"
 printfn "%s" (loopMulTable(1))
 printfn "%s" (loopMulTable(2))
 printfn "%s" (loopMulTable(3))
@@ -63,6 +65,7 @@ printfn "%s" (loopMulTable(10))
 ///<summary>A function that compares the resulting strings of mulTable and loopMultable and returns a column containing n and true or false.</summary>
 /// <param name="a">An integer that the user inputs and which is given to the functions mulTable and loopMulTable.</param>
 /// <returns>Returns a small table containing a true or false statement and input.</returns>
+printfn "Opgave 3g1c"
 printf "Enter a number: "
 let a = int (System.Console.ReadLine()) 
 printfn "%d || %b" a (mulTable(a) = loopMulTable(a))
@@ -70,6 +73,7 @@ printfn "%d || %b" a (mulTable(a) = loopMulTable(a))
 //We think the problem might be in the first table, something to do with the escape characters
 
 //3g1d
+printfn "Opgave 3g1d"
 printfn "%s" (mulTable(a))
 printfn "%A" (mulTable(a))
 (*%s prints mulTable as a string. and %A also prints a string because mulTable already returns a string.

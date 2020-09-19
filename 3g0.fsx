@@ -38,12 +38,14 @@ let simpleSum n:int =
 /// <returns> The program returns the values of the summation of n calculated in the sum og simpleSum function </returns>
 printf "Enter a Number:"
 let a = int (System.Console.ReadLine())
+printfn "Opgave 3g0c"
 printfn "sum = %i, simpleSum = %i" (sum(a)) (simpleSum(a))
 
 //3g0 d) 
 /// <summary> This program prints a table that shows n from 1 to 10 and its sum with both functions </summary>
 /// <param name="1"> this is an index in for-loop </param>
 /// <returns> This program returns det sum of n in a table using both functions made above </returns>
+printfn "Opgave 3g1d"
 printfn " n |sum |simplesum"
 for i = 1 to 10 do 
     printfn "%2d | %2d | %2d" i (sum(i)) (simpleSum(i)) 
