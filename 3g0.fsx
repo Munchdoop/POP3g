@@ -1,6 +1,7 @@
 //HUSK DOCUMENTATION (summary, param, result)
 //opgave 3g0 a)
 /// <summary> A function has been made that sums all the numbers from i=1 to n</summary>
+/// <param name="sum"> Function that sums from i to n </param>
 /// <param name="n"> input size. </param>
 /// <param name="s"> variable to store summation. </param>
 /// <param name="i"> counter in while-loop. </param>
@@ -18,6 +19,7 @@ let sum n:int =
 
 //3g0 b)
 /// <summary> We have made a function which uses the formula in figure 3 to find to summation of n </summary>
+/// <param name="simpleSum"> Function that calculates formula for given n </param>
 /// <param name="n"> input size. </param>
 /// <param name="s"> variable to store result of formula in. </param>
 /// <returns> The function returns the summation of n, the same result as in the sum function </returns>
