@@ -1,8 +1,10 @@
 //3g1 a)
-///<summary>
-/// <param>
-/// <returns>
-let tabel = "       1   2   3   4   5   6   7   8   9  10
+///<summary>We have a function that returns the multiplication tables up until the n'th multiplication table.</summary>
+/// <param name="table">String containing multiplication tables from 1 to 10</param>
+/// <param name="mulTable">Function taking an integer</param>
+/// <param name="n">Input which is an integer</param>
+/// <returns>If n is > 1 and < 10, it returns the multiplication tables up to and including the n'th table, else it returns an empty string</returns>
+let table = "       1   2   3   4   5   6   7   8   9  10
    1   1   2   3   4   5   6   7   8   9  10
    2   2   4   6   8  10  12  14  16  18  20
    3   3   6   9  12  15  18  21  24  27  30
@@ -17,7 +19,7 @@ let mulTable (n:int) =
     if n < 0 || n > 10 then
         ""
     else
-        tabel.[..(44+(n*46))-1] 
+        table.[..(44+(n*46))-1] 
                                 
 printfn "%s" (mulTable(1))
 printfn "%s" (mulTable(2))
@@ -25,9 +27,14 @@ printfn "%s" (mulTable(3))
 printfn "%s" (mulTable(10))
 
 //3g1 b)
-///<summary>
-/// <param>
-/// <returns>
+///<summary>This is a function that first builds a string containing multiplication tables for 1 to 10, and afterwards returns the multiplication tables up to and including the (input) n'th table</summary>
+/// <param name="loopMulTable">Function that that takes an integer n an input and builds the multiplication tables through a for loop nested in a for loop </param>
+/// <param name="n">Input which is an integer</param>
+/// <param name="res">Mutable which becomes the multiplation tables</param>
+/// <param name="num">Mutable which the value i*j gets mapped to</param>
+/// <param name="stringNum">Mutable which contains the number/index each multiplication table</param>
+/// <param name="a">Integer which takes the input from the user and inputs it into mulTable and loopMultable</param>
+/// <returns>If n < 1 or > 10 it returns the multiplication tables up to and including the n'th multiplation table, else it returns an empty string </returns>
 let loopMulTable (n:int) =
     if n < 1 then
         ""
@@ -60,12 +67,12 @@ printfn "loopMulTable: \n%s" (loopMulTable(a))
 
 
 //3g1c
-///<summary>
-/// <param>
+///<summary>A function that compares the resulting strings of mulTable and loopMultable and returns a column containing n and true or false</summary>
+/// <param name="a">An integer that is send to the functions mulTable and loopMulTable</param>
 /// <returns>
 printfn "%d || %b" a (mulTable(a) = loopMulTable(a))
 //Should be returning True, but returns False for all n but 10.  
-//We think the problem might be in the first tabel, something to do with the escape characters
+//We think the problem might be in the first table, something to do with the escape characters
 
 //3g1d
 printfn "%s" (mulTable(a))
