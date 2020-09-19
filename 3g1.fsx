@@ -1,5 +1,7 @@
-//løsningsforslag til a og b 
-//3g1 a) ~~VIRKER IKKE HELT~~ Det virker nu :)
+//3g1 a)
+///<summary>
+/// <param>
+/// <returns>
 let tabel = "       1   2   3   4   5   6   7   8   9  10
    1   1   2   3   4   5   6   7   8   9  10
    2   2   4   6   8  10  12  14  16  18  20
@@ -46,10 +48,11 @@ let mulTable (n:int) =
 *)
 
 
+
+//3g1 b)
 ///<summary>
 /// <param>
 /// <returns>
-//3g1 b)
 let loopMulTable (n:int) =
     if n < 1 then
         ""
@@ -89,10 +92,15 @@ printfn "loopMulTable: \n%s" (loopMulTable(a))
 //let str1 = mulTable(a)
 //let str2 = loopMulTable(a)
 //printfn "%d || %b" a (str1 = str2)
+///<summary>
+/// <param>
+/// <returns>
 printfn "%d || %b" a (mulTable(a) = loopMulTable(a))
 
 printfn "%s" (mulTable(a))
 printfn "%A" [mulTable(a)]
+
+//3g1d
 (*%s prints mulTable as a string. and %A also prints a string because mulTable already returns a string.
 With %s you are given a string placeholder which is replaced by the argument you give it, here the Multable result. 
 With %A it converts any argument into a string, with a Fsharp internal function called ToString.*)
