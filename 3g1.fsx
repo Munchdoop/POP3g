@@ -69,7 +69,7 @@ printfn "%d || %b" a (mulTable(a) = loopMulTable(a))
 
 //3g1d
 printfn "%s" (mulTable(a))
-printfn "%A" [mulTable(a)]
+printfn "%A" (mulTable(a))
 (*%s prints mulTable as a string. and %A also prints a string because mulTable already returns a string.
 With %s you are given a string placeholder which is replaced by the argument you give it, here the Multable result. 
 With %A it converts any argument into a string, with a Fsharp internal function called ToString.*)
