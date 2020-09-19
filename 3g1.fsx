@@ -1,9 +1,9 @@
 //3g1 a)
 ///<summary>We have a function that returns the multiplication tables up until the n'th multiplication table.</summary>
-/// <param name="table">String containing multiplication tables from 1 to 10</param>
-/// <param name="mulTable">Function taking an integer</param>
-/// <param name="n">Input which is an integer</param>
-/// <returns>If n is > 1 and < 10, it returns the multiplication tables up to and including the n'th table, else it returns an empty string</returns>
+/// <param name="table">String containing multiplication tables from 1 to 10.</param>
+/// <param name="mulTable">Function taking an integer.</param>
+/// <param name="n">Input which is an integer.</param>
+/// <returns>If n is > 1 and < 10, it returns the multiplication tables up to and including the n'th table, else it returns an empty string.</returns>
 let table = "       1   2   3   4   5   6   7   8   9  10
    1   1   2   3   4   5   6   7   8   9  10
    2   2   4   6   8  10  12  14  16  18  20
@@ -27,14 +27,13 @@ printfn "%s" (mulTable(3))
 printfn "%s" (mulTable(10))
 
 //3g1 b)
-///<summary>This is a function that first builds a string containing multiplication tables for 1 to 10, and afterwards returns the multiplication tables up to and including the (input) n'th table</summary>
-/// <param name="loopMulTable">Function that that takes an integer n an input and builds the multiplication tables through a for loop nested in a for loop </param>
-/// <param name="n">Input which is an integer</param>
-/// <param name="res">Mutable which becomes the multiplation tables</param>
-/// <param name="num">Mutable which the value i*j gets mapped to</param>
-/// <param name="stringNum">Mutable which contains the number/index each multiplication table</param>
-/// <param name="a">Integer which takes the input from the user and inputs it into mulTable and loopMultable</param>
-/// <returns>If n < 1 or > 10 it returns the multiplication tables up to and including the n'th multiplation table, else it returns an empty string </returns>
+///<summary>This is a function that first builds a string containing multiplication tables for 1 to 10, and afterwards returns the multiplication tables up to and including the (input) n'th table.</summary>
+/// <param name="loopMulTable">Function that that takes an integer n an input and builds the multiplication tables through a for loop nested in a for loop.</param>
+/// <param name="n">Input which is an integer.</param>
+/// <param name="res">Mutable which becomes the multiplation tables.</param>
+/// <param name="num">Mutable which the value i*j gets mapped to.</param>
+/// <param name="stringNum">Mutable variable that stores num as a string.</param>
+/// <returns>If n < 1 or > 10 it returns the multiplication tables up to and including the n'th multiplation table, else it returns an empty string.</returns>
 let loopMulTable (n:int) =
     if n < 1 then
         ""
@@ -59,17 +58,13 @@ printfn "%s" (loopMulTable(2))
 printfn "%s" (loopMulTable(3))
 printfn "%s" (loopMulTable(10))
 
-printf "Enter a number: "
-let a = int (System.Console.ReadLine())
-
-printfn "mulTable: \n%s" (mulTable(a))
-printfn "loopMulTable: \n%s" (loopMulTable(a))
-
 
 //3g1c
-///<summary>A function that compares the resulting strings of mulTable and loopMultable and returns a column containing n and true or false</summary>
-/// <param name="a">An integer that is send to the functions mulTable and loopMulTable</param>
-/// <returns>
+///<summary>A function that compares the resulting strings of mulTable and loopMultable and returns a column containing n and true or false.</summary>
+/// <param name="a">An integer that the user inputs and which is given to the functions mulTable and loopMulTable.</param>
+/// <returns>Returns a small table containing a true or false statement and input.</returns>
+printf "Enter a number: "
+let a = int (System.Console.ReadLine()) 
 printfn "%d || %b" a (mulTable(a) = loopMulTable(a))
 //Should be returning True, but returns False for all n but 10.  
 //We think the problem might be in the first table, something to do with the escape characters
