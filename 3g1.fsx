@@ -17,37 +17,12 @@ let mulTable (n:int) =
     if n < 0 || n > 10 then
         ""
     else
-        //tabel.[..44+(n*46)]   //hvorfor kan det ikke være 44? (n-1) måske?
-        tabel.[..(44+(n*46))-1] // jep det er præcis derfor lol
-                                // ADVARSEL: underlig bug her.
-                                // Må være "tabel.[..(44+(n*45))-1]"" for at virke rigtigt i VSC terminalen...
-
-(*
-  if n = 10 then  
-        tabel
-    elif n=1 then
-        tabel.[..88] 
-    elif n=2 then 
-        tabel.[..73]
-    elif n=3 then 
-        tabel.[..103]
-    elif n=4 then 
-        tabel.[..133]
-    elif n=5 then 
-        tabel.[..164]
-    elif n=6 then 
-        tabel.[..195]
-    elif n=7 then 
-        tabel.[..226]
-    elif n=8 then 
-        tabel.[..257]
-    elif n=9 then 
-        tabel.[..288]
-    else 
-        ""
-*)
-
-
+        tabel.[..(44+(n*46))-1] 
+                                
+printfn "%s" (mulTable(1))
+printfn "%s" (mulTable(2))
+printfn "%s" (mulTable(3))
+printfn "%s" (mulTable(10))
 
 //3g1 b)
 ///<summary>
@@ -58,22 +33,24 @@ let loopMulTable (n:int) =
         ""
     elif n > 10 then
         ""
-    else
-        //let mutable res = "" (GAMLE)
-        
-        // initialiser res med den øverste række i multiplikationstabellen
+    else  
+        // initialising res with the first line of multiplication table
         let mutable res = "       1   2   3   4   5   6   7   8   9  10"
         let mutable num = 0
         let mutable stringNum = "" 
         
         for i = 1 to n do
-            res <- res + sprintf "\n%4d" i  // print newline + nuværende i (n) værdi
+            res <- res + sprintf "\n%4d" i  // print newline + value of n
             for j = 1 to 10 do
                 num <- i*j
                 stringNum <- sprintf "%4d" num
                 res <- res + stringNum
-            //res <- res + "\n" (GAMLE)
         res
+
+printfn "%s" (loopMulTable(1))
+printfn "%s" (loopMulTable(2))
+printfn "%s" (loopMulTable(3))
+printfn "%s" (loopMulTable(10))
 
 printf "Enter a number: "
 let a = int (System.Console.ReadLine())
@@ -83,24 +60,16 @@ printfn "loopMulTable: \n%s" (loopMulTable(a))
 
 
 //3g1c
-(*for i=1 to a do 
-    if mulTable(i) = loopMulTable(i) then
-        printfn "%2d True" i
-    else
-        printfn "%2d False" i*)
-
-//let str1 = mulTable(a)
-//let str2 = loopMulTable(a)
-//printfn "%d || %b" a (str1 = str2)
 ///<summary>
 /// <param>
 /// <returns>
 printfn "%d || %b" a (mulTable(a) = loopMulTable(a))
-
-printfn "%s" (mulTable(a))
-printfn "%A" [mulTable(a)]
+//Should be returning True, but returns False for all n but 10.  
+//We think the problem might be in the first tabel, something to do with the escape characters
 
 //3g1d
+printfn "%s" (mulTable(a))
+printfn "%A" [mulTable(a)]
 (*%s prints mulTable as a string. and %A also prints a string because mulTable already returns a string.
 With %s you are given a string placeholder which is replaced by the argument you give it, here the Multable result. 
 With %A it converts any argument into a string, with a Fsharp internal function called ToString.*)
